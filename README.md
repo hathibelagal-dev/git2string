@@ -6,10 +6,16 @@ It will automatically ignore all binary files. Additionally, it will respect you
 ## Usage
 
 ```
-repo-to-remote <repo root directory>
+repo-to-prompt <repo root directory>
 ```
 
-The prompt will be generated in a file called **llm_prompt.txt**.
+By default, the prompt will be generated in a file called **llm_prompt.txt**.
+
+You can specify a different filename as follows:
+
+```
+repo-to-prompt <repo root directory> --output-file <filename>
+```
 
 ## Additional Features
 
