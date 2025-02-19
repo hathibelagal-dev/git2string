@@ -4,4 +4,5 @@ tiktoken
 rich
 pathspec
 build
+gitpython
 twine

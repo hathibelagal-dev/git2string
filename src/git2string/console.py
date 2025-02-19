@@ -1,6 +1,7 @@
 from rich.console import Console as C
 from rich.text import Text
 
+
 class Console:
     def __init__(self):
         self.console = C()

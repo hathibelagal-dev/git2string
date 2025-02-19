@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='git2string',
-    version='0.1.0',
+    version='0.1.2',
     author='Ashraff Hathibelagal',
     description='A tool to turn a Git repository into an LLM-friendly prompt',
     long_description=long_description,
@@ -18,7 +18,8 @@ setup(
         'tqdm',
         'tiktoken',
         'rich',
-        'pathspec'
+        'pathspec',
+        'gitpython'
     ],
     entry_points={
         'console_scripts': [

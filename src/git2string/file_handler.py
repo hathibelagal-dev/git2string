@@ -1,3 +1,7 @@
+import os
+from urllib.parse import urlparse
+
+
 class FileHandler:
     def __init__(self, include_binary=False):
         """Initialize with a flag for including binary files."""
@@ -14,6 +18,17 @@ class FileHandler:
         except:
             pass
         return False
+
+    @staticmethod
+    def is_url(string):
+        """
+        Check if the repo location is a URL.
+        """
+        try:
+            result = urlparse(string)
+            return True if all([result.scheme, result.netloc]) else False
+        except ValueError:
+            return False
 
     def read_file(self, file_path):
         """Read and return file content, handling binary if specified."""
