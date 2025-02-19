@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='git2string',
-    version='0.1.2',
+    version='0.1.3',
     author='Ashraff Hathibelagal',
     description='A tool to turn a Git repository into an LLM-friendly prompt',
     long_description=long_description,
@@ -27,8 +27,9 @@ setup(
         ],
     },
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
+        'Environment :: Console',
         'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
