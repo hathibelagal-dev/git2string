@@ -1,6 +1,6 @@
 import argparse
-from concatenator import FileConcatenator
-from console import Console
+from src.concatenator import FileConcatenator
+from src.console import Console
 
 def main():
     console = Console()
