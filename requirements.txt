@@ -6,3 +6,4 @@ pathspec
 build
 gitpython
 twine
+pytest

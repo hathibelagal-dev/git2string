@@ -1,7 +1,11 @@
 # git2string
-![PyPI - Version](https://img.shields.io/pypi/v/git2string) ![PyPI - License](https://img.shields.io/pypi/l/git2string)
+[![PyPI - Version](https://img.shields.io/pypi/v/git2string)](https://pypi.org/project/git2string/) ![PyPI - License](https://img.shields.io/pypi/l/git2string)
 
-git2string is a powerful tool that can quickly convert an entire Git repository to one text file that can be uploaded to any large language model (LLM).
+<div style="text-align: center;">
+    <img src="https://raw.githubusercontent.com/hathibelagal-dev/git2string/refs/heads/main/assets/git2string.png" style="width:256px"/>
+</div>
+
+git2string is a powerful tool that simplifies the process of converting an entire Git repository into a single LLM-friendly text file, which is easy to upload. It also tells you how many tokens the text file will consume. So, it will hopefully be saving you a lot of time and effort.
 
 It will automatically ignore all binary files. Additionally, it will respect your **.gitignore**. You can also create a **.r2pignore** file in your repo to specify the files that should be skipped for prompt generation.
 
