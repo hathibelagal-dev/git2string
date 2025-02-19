@@ -1,6 +1,6 @@
-from src.ignore_handler import IgnoreHandler
-from src.file_handler import FileHandler
-from src.tokenizer import Tokenizer
+from .ignore_handler import IgnoreHandler
+from .file_handler import FileHandler
+from .tokenizer import Tokenizer
 from tqdm import tqdm
 import os
 

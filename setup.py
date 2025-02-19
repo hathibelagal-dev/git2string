@@ -22,7 +22,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'repo-to-prompt=src.main:main',
+            'repo-to-prompt=r2p.main:main',
         ],
     },
     classifiers=[

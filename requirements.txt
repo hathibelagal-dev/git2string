@@ -3,3 +3,5 @@ black
 tiktoken
 rich
 pathspec
+build
+twine
