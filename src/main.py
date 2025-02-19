@@ -1,9 +1,9 @@
 import argparse
 from concatenator import FileConcatenator
-import emoji
-
+from console import Console
 
 def main():
+    console = Console()
     parser = argparse.ArgumentParser(
         description="Concatenate all files of a Git repo into a single prompt."
     )
@@ -25,19 +25,13 @@ def main():
     concatenator = FileConcatenator(
         args.repo_path, args.output_file, args.include_binary, args.output_encoding
     )
-    _, n_ignored = concatenator.concatenate()
-    print(
-        emoji.emojize(
-            f":thumbs_up: All valid files have been concatenated into {args.output_file}"
-        )
-    )
+    _, n_ignored, n_tokens, n_errors = concatenator.concatenate()
+    console.print_success(f"✔ All valid files have been concatenated into {args.output_file}")
     if n_ignored > 0:
-        print(
-            emoji.emojize(
-                f":thumbs_up: {n_ignored} files were ignored due to .gitignore or .r2pignore rules"
-            )
-        )
-
+        console.print_success(f"✔ {n_ignored} files were ignored due to .gitignore or .r2pignore rules")        
+    console.print_success(f"ℹ {n_tokens} tokens are present in the prompt")
+    if n_errors > 0:
+        console.print_warning(f"WARNING: {n_errors} files could not be read.")
 
 if __name__ == "__main__":
     main()

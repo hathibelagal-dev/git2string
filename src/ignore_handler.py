@@ -19,7 +19,7 @@ class IgnoreHandler:
             if ignore_file_path.exists():
                 with open(ignore_file_path, "r", encoding="utf-8") as f:
                     ignore_patterns.extend(f.readlines())
-
+        
         return pathspec.PathSpec.from_lines("gitwildmatch", ignore_patterns)
 
     def should_ignore(self, file_path):

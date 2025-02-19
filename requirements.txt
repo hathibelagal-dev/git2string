@@ -1,3 +1,5 @@
 tqdm
 black
-emoji
+tiktoken
+rich
+pathspec

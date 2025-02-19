@@ -102,3 +102,5 @@ Desktop.ini
 
 # Configuration files
 *.cfg
+
+llm_prompt.txt
