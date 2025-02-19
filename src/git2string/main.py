@@ -15,6 +15,11 @@ def main():
         help="Include binary files in concatenation",
     )
     parser.add_argument(
+        "--only-dir",
+        default="",
+        help="Only include files in this directory in concatenation",
+    )
+    parser.add_argument(
         "--output-file", default="llm_prompt.txt", help="Name of the output file"
     )
     parser.add_argument(
@@ -34,6 +39,7 @@ def main():
         args.include_binary,
         args.output_encoding,
         model=args.openai_model,
+        only_dir=args.only_dir,
     )
     _, n_ignored, n_tokens, n_errors = concatenator.concatenate()
     console.print_success(
@@ -44,6 +50,8 @@ def main():
             f"✔ {n_ignored} files were ignored due to .gitignore or .r2pignore rules"
         )
     console.print_success(f"ℹ {n_tokens} tokens are present in the prompt")
+    if n_tokens > 128000:
+        console.print_warning("WARNING: The prompt is longer than 128,000 tokens.")
     if n_errors > 0:
         console.print_warning(f"WARNING: {n_errors} files could not be read.")
 

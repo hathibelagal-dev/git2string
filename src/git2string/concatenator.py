@@ -14,12 +14,16 @@ class FileConcatenator:
         include_binary=False,
         encoding="utf-8",
         model="gpt2",
+        only_dir="",
     ):
         """Initialize with paths and binary inclusion flag."""
         if FileHandler.is_url(repo_path):
             repo_downloader = RepoDownloader(repo_path)
             repo_downloader.download_repo()
             repo_path = repo_downloader.get_repo_path()
+        if len(only_dir) > 0 and only_dir[0] == "/":
+            only_dir = only_dir[1:]
+        repo_path = os.path.join(repo_path, only_dir)
         self.repo_path = repo_path
         self.output_file = output_file
         self.ignore_handler = IgnoreHandler(repo_path)

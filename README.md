@@ -1,7 +1,7 @@
 # git2string
 ![PyPI - Version](https://img.shields.io/pypi/v/git2string) ![PyPI - License](https://img.shields.io/pypi/l/git2string)
 
-git2string is a powerful tool that can quickly convert an entire Git repository to a prompt that can be fed to any large language model (LLM).
+git2string is a powerful tool that can quickly convert an entire Git repository to one text file that can be uploaded to any large language model (LLM).
 
 It will automatically ignore all binary files. Additionally, it will respect your **.gitignore**. You can also create a **.r2pignore** file in your repo to specify the files that should be skipped for prompt generation.
 
