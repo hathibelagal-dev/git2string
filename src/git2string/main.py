@@ -1,6 +1,6 @@
 import argparse
-from repo2prompt.concatenator import FileConcatenator
-from repo2prompt.console import Console
+from git2string.concatenator import FileConcatenator
+from git2string.console import Console
 
 def main():
     console = Console()
