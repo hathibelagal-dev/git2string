@@ -4,13 +4,13 @@ with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='repo-to-prompt',
+    name='repo2prompt',
     version='0.1.0',
     author='Ashraff Hathibelagal',
     description='A tool to turn a Git repository into an LLM-friendly prompt',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/hathibelagal-dev/repo-to-prompt',
+    url='https://github.com/hathibelagal-dev/repo2prompt',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     python_requires='>=3.6',
@@ -22,7 +22,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'repo-to-prompt=r2p.main:main',
+            'repo2prompt=repo2prompt.main:main',
         ],
     },
     classifiers=[
@@ -36,7 +36,7 @@ setup(
     ],
     keywords='ai language-models devtools gpt-4 openai llama mistral gemini chatbot',
     project_urls={
-        'Source': 'https://github.com/hathibelagal-dev/repo-to-prompt',
-        'Tracker': 'https://github.com/hathibelagal-dev/repo-to-prompt/issues',
+        'Source': 'https://github.com/hathibelagal-dev/repo2prompt',
+        'Tracker': 'https://github.com/hathibelagal-dev/repo2prompt/issues',
     },
 )

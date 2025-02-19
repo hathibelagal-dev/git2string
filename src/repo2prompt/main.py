@@ -1,6 +1,6 @@
 import argparse
-from r2p.concatenator import FileConcatenator
-from r2p.console import Console
+from repo2prompt.concatenator import FileConcatenator
+from repo2prompt.console import Console
 
 def main():
     console = Console()
