@@ -18,9 +18,9 @@ class FileConcatenator:
     ):
         """Initialize with paths and binary inclusion flag."""
         if FileHandler.is_url(repo_path):
-            repo_downloader = RepoDownloader(repo_path)
-            repo_downloader.download_repo()
-            repo_path = repo_downloader.get_repo_path()
+            self.repo_downloader = RepoDownloader(repo_path)
+            self.repo_downloader.download_repo()
+            repo_path = self.repo_downloader.get_repo_path()
         if len(only_dir) > 0 and only_dir[0] == "/":
             only_dir = only_dir[1:]
         repo_path = os.path.join(repo_path, only_dir)
@@ -77,3 +77,7 @@ class FileConcatenator:
             self.tokenizer.count_tokens(),
             n_errors,
         )
+    
+    def cleanup(self):
+        if self.repo_downloader is not None:
+            self.repo_downloader.cleanup()    

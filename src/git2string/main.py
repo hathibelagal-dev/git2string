@@ -55,6 +55,5 @@ def main():
     if n_errors > 0:
         console.print_warning(f"WARNING: {n_errors} files could not be read.")
 
-
 if __name__ == "__main__":
     main()
